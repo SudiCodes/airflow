@@ -31,9 +31,24 @@ git clone https://github.com/SudiCodes/airflow.git
 ```shell
 Copy code
 pip install "apache-airflow[celery]==2.6.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.1/constraints-3.7.txt"
+
 ```
 
-3. Configure Airflow:
+3. Initialize Airflow:
+
+1. Setting up AIRFLOW working directory to current folder
+
+```shell
+export AIRFLOW_HOME=.
+```
+
+2. Intialize Airflow configurations;
+
+```shell
+airflow db init
+```
+
+4. Configure Airflow:
 
 Update the Airflow configuration files in the config directory to match your environment and preferences.
 Set up the required connections and variables in the Airflow UI or via the Airflow command line.
@@ -46,7 +61,7 @@ airflow webserver
 Add or modify DAGs:
 ```
 
-4. Create or modify DAG files in the dags directory to define your workflows.
+5. Create or modify DAG files in the dags directory to define your workflows.
    Use the Airflow operators and tools to design and orchestrate your workflows.
    Monitor and manage your workflows:
 
